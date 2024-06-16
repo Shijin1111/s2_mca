@@ -1,0 +1,99 @@
+->Change Directory: cd s2
+->Make a new directory: mkdir nsa
+->list out files: ls
+DBMS  Java  nsa
+->list out files with more details: ls -l
+total 12
+drwxrwxr-x 2 exam1 exam1 4096 Feb  6 14:20 DBMS
+drwxrwxr-x 2 exam1 exam1 4096 Feb  7 14:25 Java
+drwxrwxr-x 2 exam1 exam1 4096 Feb  8 14:09 nsa
+
+->Date: date
+Thu Feb  8 14:11:35 IST 2024
+
+->Manual/Help: man ls
+
+->Print: echo hello
+hello
+
+
+->Create a new file enter the data:  cat > sample.txt
+
+hi                      
+hello
+->Display the file content: cat sample.txt
+
+hi
+hello
+
+->Create a new File: touch test.txt
+
+->Change modes/permissions: chmod u=rwx sample.txt
+ ls -l sample.txt
+-rwxrw-r-- 1 exam1 exam1 9 Feb  8 14:18 sample.txt
+The first - : to show a regular file
+
+->To remove all permissions: chmod u= sample.txt
+(base) exam1@mca-pc61:~/Desktop/s2/nsa$ ls -l sample.txt
+----rw-r-- 1 exam1 exam1 9 Feb  8 14:18 sample.txt
+
+-> Second method to remove permissions: chmod u=-rwx sample.txt
+(base) exam1@mca-pc61:~/Desktop/s2/nsa$ ls -l sample.txt
+----rw-r-- 1 exam1 exam1 9 Feb  8 14:18 sample.txt
+
+->Store values in variable and displaying them
+  a=10
+  echo a
+    Output: a
+ echo $a
+    Output: 10
+
+-> Copy file: cp sample.txt s.txt
+
+-> move file: mv sample.txt s.txt
+
+-> Remove file: rm sample.txt
+
+
+-> Present working directory:pwd
+/home/exam1/Desktop/s2/nsa
+
+-> Displays all active processes: ps
+  PID TTY          TIME CMD
+ 3339 pts/0    00:00:00 bash
+ 5615 pts/0    00:00:00 ps
+
+-> Displays complete history: history
+
+-> Reads a value form user: read a
+2
+
+-> read command with a message:  read -p "Enter value: " a
+Enter value: 3
+
+-> problem with variables:
+  read -p "Enter value 1 : " a
+    Enter value 1 : 3
+  read -p "Enter value 2 : " b
+    Enter value 2 : 5
+  c=a+b
+  echo $c
+    a+b
+  c=$a+$b
+  echo $c
+    3+5
+  c=$(($a+$b))
+  echo $c
+    8
+
+-> Returns all line that have a match (case sensitive): grep "my" test1.txt
+my age is 22
+my pet name is xyz
+
+-> Returns all line that have a match (case insensitive):grep -i "my" test1.txt
+My name is abc
+my age is 22
+MY fav sportsperson is dhoni
+my pet name is xyz
+
+
